@@ -52,7 +52,7 @@ function settimana(userId) {
       giornoDellaSettimana = "Domenica";
       break;
   }
-  //inserisco l'elemento "p" con il giorno della settimana
+  //inserisco il giorno della settimana nell'elemento "p"
   var textnode = document.createTextNode(giornoDellaSettimana);
   node.appendChild(textnode);
   document.getElementById("testo").appendChild(node);
@@ -62,13 +62,11 @@ function risolvi(users) {
   for (let index = 0; index < users.length; index++) {
     //prendeo l'user corrente utilizzando l'index del for
     const currentUser = users[index];
-    //prendo l'id dell user che mi servirà per le funzioni dopo
     const currentId = currentUser.id;
 
     //verifico se l'id dell'user si trova nel range 1..7
-    const rangeIsCorrect = inserisci(currentId);
-
     //se lo è allora inserisco nell'html il giorno della settimana, altrimenti stampo un messaggio di errore
+    const rangeIsCorrect = inserisci(currentId);
     if (rangeIsCorrect) {
       settimana(currentId);
     } else {
