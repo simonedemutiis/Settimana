@@ -6,7 +6,7 @@ function onSend() {
   request.responseType = "json";
   request.send();
 
-  //Quando ha terminato la chiamata richiamo la funzione principale con il risultato della chiamata
+  //Quando ha terminato la chiamata richiamo la funzione principale con il risultato della chiamata.
   request.onload = function () {
     const users = request.response;
     console.log("users -> ", users);
